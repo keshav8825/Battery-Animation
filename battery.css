@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+}
+.box{
+    width: 300px;
+    height: 160px;
+    border: 3px solid whitesmoke;
+    border-radius: 12px;
+    position: relative;
+}
+.box:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px; 
+    transform: translate(10px,-50%);
+    width: 10px;
+    height: 25px; 
+    background-color: transparent;
+    border: 3px solid whitesmoke;
+
+
+
+}
+.box:after{
+    content: "";
+    position: absolute;
+    background: #f1efef;
+    height: 160px;
+    width: 100px;
+    border-radius: 7px;
+    animation: animate 10s linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        width: 0%;
+        background: red;        
+    }
+    25%{
+        width: 25%;
+        background: orange;
+    }
+    50%{
+        width:50%;
+        background: yellow;
+    }
+   75%{
+    width: 75%;
+    background: greenyellow;
+   }
+   100%{
+    width: 100%;
+    background: green;
+   }
+}
